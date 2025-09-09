@@ -1,0 +1,99 @@
+{
+  "tests": [
+    {
+      "name": "Homepage exists (index.html)",
+      "run": "test -f index.html",
+      "points": 5
+    },
+    {
+      "name": "About page exists (about.html)",
+      "run": "test -f about.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page exists (contact.html)",
+      "run": "test -f contact.html",
+      "points": 5
+    },
+    {
+      "name": "Homepage has About section with id",
+      "run": "grep -qi 'id=\"about\"' index.html",
+      "points": 5
+    },
+    {
+      "name": "Homepage has Contact section with id",
+      "run": "grep -qi 'id=\"contact\"' index.html",
+      "points": 5
+    },
+    {
+      "name": "Homepage has iframe",
+      "run": "grep -qi '<iframe' index.html",
+      "points": 5
+    },
+    {
+      "name": "Homepage has form",
+      "run": "grep -qi '<form' index.html",
+      "points": 5
+    },
+    {
+      "name": "Homepage has table",
+      "run": "grep -qi '<table' index.html",
+      "points": 5
+    },
+    {
+      "name": "About page has heading",
+      "run": "grep -qi '<h1' about.html",
+      "points": 5
+    },
+    {
+      "name": "About page has paragraph",
+      "run": "grep -qi '<p' about.html",
+      "points": 5
+    },
+    {
+      "name": "About page has image with alt",
+      "run": "grep -qi '<img' about.html && grep -qi 'alt=' about.html",
+      "points": 5
+    },
+    {
+      "name": "About page has list (ul or ol)",
+      "run": "grep -qi '<ul' about.html || grep -qi '<ol' about.html",
+      "points": 5
+    },
+    {
+      "name": "About page has element with id",
+      "run": "grep -qi 'id=' about.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page has heading",
+      "run": "grep -qi '<h1' contact.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page has paragraph",
+      "run": "grep -qi '<p' contact.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page has form",
+      "run": "grep -qi '<form' contact.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page has at least 2 inputs",
+      "run": "grep -qi '<input' contact.html && [ $(grep -c '<input' contact.html) -ge 2 ]",
+      "points": 5
+    },
+    {
+      "name": "Contact page has table",
+      "run": "grep -qi '<table' contact.html",
+      "points": 5
+    },
+    {
+      "name": "Contact page has element with id",
+      "run": "grep -qi 'id=' contact.html",
+      "points": 5
+    }
+  ]
+}
